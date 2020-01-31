@@ -1,28 +1,38 @@
-
-function findByNum(num) {
-    if (!elements[num - 1]) { console.error('Check for errors, no such element exists.'); return 'Over!'; }
-    console.log(`The element is ${elements[num - 1].name}`);
-    console.log(`Symbol:${elements[num - 1].sym}`);
-    console.log(`Group:${elements[num - 1].group} Period:${elements[num - 1].period}`);
-    return 'Over!';
+let output;
+function findByNum(num,check) {
+    if(check==false){
+        if (!elements[num - 1]) { output='Check for errors, no such element exists.'; return 'Over!'; }
+        output=`The element is ${elements[num - 1].name} \n`
+                                +
+                `Symbol: ${elements[num - 1].sym} \n`
+                                +
+        `Group: ${elements[num - 1].group} Period: ${elements[num - 1].period} \n`;
+        document.getElementById('output').innerHTML=output;
+        return 'Enjoy!';
+    }
 }
 function find(name) {
     let yes;
     for (let i = 0; i < elements.length; i++) {
         if (elements[i].sym == name) {
-            console.log(`The element is ${elements[i].name}`);
-            console.log(`Symbol: ${elements[i].sym}`);
-            console.log(`Group: ${elements[i].group}   Period: ${elements[i].period}`);
+            output=`The element is ${elements[i].name} \n`
+                                    +
+                        `Symbol: ${elements[i].sym} \n`
+                                    +
+            `Group: ${elements[i].group}   Period: ${elements[i].period} \n`;
+            document.getElementById('output').innerHTML=output
             yes = name;
             break;
         }
 
     }
     if (yes) { return 'Enjoy' }
-    else { return 'Check for errors, element not found!' };
-
+    else {return false; };
 }
-
+function execute(input){
+    find(`${input}`);
+    findByNum(input,find(`${input}`));
+}
 
 
 

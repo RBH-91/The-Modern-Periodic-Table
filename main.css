@@ -2,13 +2,15 @@ body{
     background-image: linear-gradient(to bottom, #de6262, #e87869, #f08e72, #f8a37e, #ffb88c);
 }
 .card{
-    height:250px;
+    height:200px;
+    width: 350px;
+}
+#num{
     width: 300px;
-    
 }
 textarea{
-    height: 300px;
-    width: 300px;
+    height: 180px;
+    width: 350px;
     font-size: 25px !important;
     font-weight: 600;
 }
