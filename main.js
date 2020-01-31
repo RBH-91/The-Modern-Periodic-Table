@@ -1,6 +1,7 @@
 let output;
 function findByNum(num,check) {
     if(check==false){
+        console.log(elements[num - 1]==false);
         if (!elements[num - 1]) { output='Check for errors, no such element exists.'; return 'Over!'; }
         output=`The element is ${elements[num - 1].name} \n`
                                 +
