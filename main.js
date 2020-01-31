@@ -2,17 +2,25 @@ let output;
 function findByNum(num,check) {
     if(check==false){
         console.log(elements[num - 1]);
-        if (!elements[num - 1]) { output='Check for errors, no such element exists.'; return 'Over!'; }
+        if (!elements[num - 1]) 
+        { output='Check for errors, no such element exists.';
+         document.getElementById('output').innerHTML=output;
+         return 'Over!';
+        }
         output=`The element is ${elements[num - 1].name} \n`
                                 +
                 `Symbol: ${elements[num - 1].sym} \n`
                                 +
         `Group: ${elements[num - 1].group} Period: ${elements[num - 1].period} \n`;
+        
         document.getElementById('output').innerHTML=output;
+        
         return 'Enjoy!';
     }
 }
-function find(name) {
+
+
+function findByName(name) {
     let yes;
     for (let i = 0; i < elements.length; i++) {
         if (elements[i].sym == name) {
@@ -30,8 +38,11 @@ function find(name) {
     if (yes) { return 'Enjoy' }
     else {return false; };
 }
+
+//for HTML part.
+
 function execute(input){
-    find(`${input}`);
+    findByName(`${input}`);
     findByNum(input,find(`${input}`));
 }
 
