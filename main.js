@@ -43,7 +43,7 @@ function findByName(name) {
 
 function execute(input){
     findByName(`${input}`);
-    findByNum(input,find(`${input}`));
+    findByNum(input,findByName(`${input}`));
 }
 
 
