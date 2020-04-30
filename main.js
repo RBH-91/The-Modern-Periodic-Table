@@ -9,7 +9,7 @@ function findByNum(num, check) {
             +
             `Symbol: ${elements[num - 1].sym} \n`
             +
-            `Atomic No:${num}`
+            `Atomic No:${num}\n`
             +
             `Group: ${elements[num - 1].group} Period: ${elements[num - 1].period} \n`;
         document.getElementById('output').innerHTML = output;
