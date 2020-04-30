@@ -5,7 +5,8 @@ function findByNum(num, check) {
             output = 'Check for errors, no such element exists.'; document.getElementById('output').innerHTML = output;
             return 'Over!';
         }
-        output = `The element is ${elements[num - 1].name} \n`
+        output = `Atomic No.:{num}
+             The element is ${elements[num - 1].name} \n`
             +
             `Symbol: ${elements[num - 1].sym} \n`
             +
